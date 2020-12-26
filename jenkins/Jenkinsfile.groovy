@@ -46,7 +46,7 @@ pipeline {
                 systemctl enable docker
 
                 2. copy the docker image to the target server
-                docker save intservice:latest > /var/jenkins_home/intService/intservice.tar    || docker.hub docker push docker.io/intservice/intservice:latest
+           //     docker save intservice:latest > /var/jenkins_home/intService/intservice.tar    || docker.hub docker push docker.io/intservice/intservice:latest
                 scp "/var/jenkins_home/intService/intservice.tar ubuntu@${prod_server_ip}:/tmp"
 
                 3. run the container
