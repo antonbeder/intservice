@@ -50,8 +50,8 @@ pipeline {
                 scp "/var/jenkins_home/intService/intservice.tar ubuntu@${prod_server_ip}:/tmp"
 
                 3. run the container
-                ssh ubuntu@${prod_server_ip} sudo docker load < /tmp/intservice.tar
-                ssh ubuntu@${prod_server_ip} sudo docker run -d intservice
+             //   ssh ubuntu@${prod_server_ip} sudo docker load < /tmp/intservice.tar
+              //  ssh ubuntu@${prod_server_ip} sudo docker run -d intservice
 
                 4. make sure it is executed correctly
                 ./bash.test.sh
