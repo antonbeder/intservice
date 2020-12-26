@@ -41,7 +41,7 @@ pipeline {
                 println("Empty stage")
 
                 1. make sure docker engine is installed and running
-                apt -y install docker.io
+             //   apt -y install docker.io
                 systemctl start docker
                 systemctl enable docker
 
