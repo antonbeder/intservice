@@ -18,7 +18,7 @@ pipeline {
                         latestVersion = _latestVersion.trim()
                         println("Latest Version seen is ${latestVersion}")
                         println("Latest commit seen is ${lastCommit}")
-                        sh "sudo docker build -t yuribernsetin/intservice:${latestVersion}-${lastCommit} . "
+                        sh "sudo docker build -t 050579/intservice:${latestVersion}-${lastCommit} . "
                     }
                 }
             }
@@ -28,7 +28,7 @@ pipeline {
                 dir('intservice/tests') {
                     script{
                         try {
-                            sh "./basic.test.sh yuribernsetin/intservice:${latestVersion}-${lastCommit}"
+                            sh "./basic.test.sh 050579/intservice:${latestVersion}-${lastCommit}"
                         } catch (err) {
                             println("Error thrown on test file execution")
                             currentBuild.result = 'ABORTED'
