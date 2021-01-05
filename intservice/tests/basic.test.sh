@@ -15,7 +15,7 @@ check_result () {
 containerName=$(echo $TAG | cut -d'-' -f2)
 
 
- docker rm -f $(sudo docker ps -aq)
+sudo docker rm -f $(sudo docker ps -aq)
 sudo docker run -d -p 5000:5000 --name $containerName $TAG
 sleep 5
 for sentiment in positive negative neutral; do
